@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package arquitetura.de.software;
-import arquitetura.de.software.telas.Tela01;
+import arquitetura.de.software.telas.TelaEscolha;
 /**
  *
  * @author AdminL
@@ -17,8 +17,8 @@ public class Principal {
     public static void main(String[] args) {
         // TODO code application logic here
          
-        Tela01 t = new Tela01();
-        t.setVisible(true);
+       TelaEscolha Principal = new TelaEscolha();
+       Principal.setVisible(true);
     }
     
 }

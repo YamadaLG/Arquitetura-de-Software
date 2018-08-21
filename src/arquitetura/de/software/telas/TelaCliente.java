@@ -18,7 +18,7 @@ import arquitetura.de.software.Cliente;
  */
 public class TelaCliente extends javax.swing.JFrame {
 
-    ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+    ArrayList<Cliente> clientes = new ArrayList<>();
 
     /**
      * Creates new form Tela01
@@ -168,19 +168,23 @@ public class TelaCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
-        Cliente m;
-        m = new Cliente();
-        String nome = txtNome.getText(); 
+     
+        
+        String nome; 
+        nome = txtNome.getText();
         String pais = cbPais.getItemAt(WIDTH);
         String siglapais =lblSigla.getText();
         String credito = txtCredito.getText();
         String telefone =txtelefone.getText();
-        int idade = (int)txtIdade.getText()
-        m.setNome(nome);
-        m.seTelefone(telefone);
-        m.setCredito(credito);
-        m.setPais(pais);
-        m.setSiglapais(siglapais);
+        int idade = Integer.parseInt(txtIdade.getText()); 
+        Cliente c = new Cliente( nome, telefone, idade, pais, siglapais, credito) ;
+        c.setNome(nome);
+        c.setTelefone(telefone);
+        c.setCredito(credito);
+        c.setPais(pais);
+        c.setSiglapais(siglapais);
+        c.setIdade(idade);
+        clientes.add(c);
 
     }//GEN-LAST:event_btnInserirActionPerformed
 
